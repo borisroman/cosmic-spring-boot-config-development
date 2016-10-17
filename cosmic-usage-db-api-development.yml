@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    platform: mariadb
+    url: jdbc:mariadb:failover://localhost:5001/usage?autoReconnect=true
+    username: root
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    properties:
+      jadira:
+        usertype:
+          autoRegisterUserTypes: true
+          javaZone: UTC
+          databaseZone: UTC
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+    joda-date-time-format: yyyy-MM-dd'T'HH:mm:ss.SSSZ
